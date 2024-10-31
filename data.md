@@ -34,7 +34,7 @@ Download the data and place it under `./data` folder.
     |--uvmap
 ```
 
-The directory structure of `./data` is as below. 
+### The directory structure of `./data` is as below. 
 
 ```
 |-- data
