@@ -60,28 +60,30 @@ python extract_key.py
 
 - Evaluation
 
-   - Evaluation with kp transfer task  ```./scripts/kptransfer.sh ```
-   - PCK, IOU, AUC Evaluation on Animal Pose and Pascal dataset  ```./scripts/evaluation2d_staths.sh ```
-   - PCK, IOU Evaluation on MagicPony dataset ```./scripts/evaluation2d_magicpony.sh ```
-   - PCK, PA-MPJPE Evaluation on PFERD dataset ```./scripts/evaluation_pferd.sh```
+   - Evaluation with kp transfer task  ```cd code && ./script/kptransfer.sh ```
+   - PCK, IOU, AUC Evaluation on Animal Pose and Pascal dataset  ```cd code && ./script/evaluation2d_staths.sh ```
+   - PCK, IOU Evaluation on MagicPony dataset ```cd code && ./script/evaluation2d_magicpony.sh ```
+   - PCK, PA-MPJPE Evaluation on PFERD dataset ```cd code && ./script/evaluation_pferd.sh```
    - Chamfer distance evaluation on PFERD dataset 
-```/scripts/evaluation_pferd_chamfer.sh```
+```cd code && ./script/evaluation_pferd_chamfer.sh```
        - To compare with MaigcPony or 3DFauna,
-            1. ```python evalpferd_utils/pferd.py``` to save images for MagicPony/3D Fauna as input and save all information
+            1. ```cd code/src && python evalpferd_utils/pferd.py``` to save images for MagicPony/3D Fauna as input and save all information
             2. run demo of [MagicPony](https://github.com/elliottwu/MagicPony) or [3DFauna](https://huggingface.co/spaces/Kyle-Liz/3DFauna_demo/tree/main), save ```obj, w2c, campos, posed_bones``` for all frames
-            3. set ```SOTA = True, PONY (True for Magicpony, False for 3DFauna)``` in ```evaluate_chamfer_pferd.py```
+            3. set ```SOTA = True, PONY (True for Magicpony, False for 3DFauna)``` in ```code/src/evaluate_chamfer_pferd.py```
 
 - Training
 ```angular2html
+cd code/script
+
 # Train only with DessiePIPE
-./scripts/train_dessie_1.sh --> Dessie
-./scripts/train_dinohmr_1.sh --> DinoHMR
+sbatch train_dessie_1.sh --> Dessie
+sbatch train_dinohmr_1.sh --> DinoHMR
 
 # Finetune with real images 
-./scripts/train_dessie_finetune_magicpony.sh --> Dessie finetune with Magicpony dataset
-./scripts/train_dessie_finetune_staths.sh --> Dessie finetune with Staths dataset
-./scripts/train_dinohmr_finetune_magicpony.sh --> DinoHMR finetune with Magicpony dataset
-./scripts/train_dinohmr_finetune_staths.sh --> DinoHMR finetune with Staths dataset
+sbatch train_dessie_finetune_magicpony.sh --> Dessie finetune with Magicpony dataset
+sbatch train_dessie_finetune_staths.sh --> Dessie finetune with Staths dataset
+sbatch train_dinohmr_finetune_magicpony.sh --> DinoHMR finetune with Magicpony dataset
+sbatch train_dinohmr_finetune_staths.sh --> DinoHMR finetune with Staths dataset
 ```
 
 ## Acknowledgements
