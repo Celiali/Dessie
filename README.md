@@ -49,7 +49,7 @@ Download and place it under `./results` folder.
 ## Run demo code
 
 - Testing
-```angular2html
+```
 python test.py
 ```  
 
@@ -84,6 +84,32 @@ sbatch train_dessie_finetune_magicpony.sh --> Dessie finetune with Magicpony dat
 sbatch train_dessie_finetune_staths.sh --> Dessie finetune with Staths dataset
 sbatch train_dinohmr_finetune_magicpony.sh --> DinoHMR finetune with Magicpony dataset
 sbatch train_dinohmr_finetune_staths.sh --> DinoHMR finetune with Staths dataset
+```
+
+## Citation
+
+If you use this code please cite
+```
+@inproceedings{li2024dessie,
+  title={Dessie: Disentanglement for Articulated 3D Horse Shape and Pose Estimation from Images},
+  author={Li, Ci and Yang, Yi and Weng, Zehang and Hernlund, Elin and Zuffi, Silvia and Kjellstr{\"o}m, Hedvig},
+  booktitle={Asian Conference on Computer Vision},
+  year={2024}
+  }
+```
+
+If you use the PFERD dataset, please cite:
+```
+@article{li2024poses,
+  title={The Poses for Equine Research Dataset (PFERD)},
+  author={Li, Ci and Mellbin, Ylva and Krogager, Johanna and Polikovsky, Senya and Holmberg, Martin and Ghorbani, Nima and Black, Michael J and Kjellstr{\"o}m, Hedvig and Zuffi, Silvia and Hernlund, Elin},
+  journal={Scientific Data},
+  volume={11},
+  number={1},
+  pages={497},
+  year={2024},
+  publisher={Nature Publishing Group UK London}
+}
 ```
 
 ## Acknowledgements
