@@ -17,7 +17,7 @@ CKPT=$PROJECTPATH/results/model/$EXPNAME/version_12/checkpoints/best.ckpt
 # CKPT=$PROJECTPATH/results/model/$EXPNAME/version_9/checkpoints/best.ckpt
 
 echo $CKPT
-/home/x_cili/.conda/envs/lassie/bin/python $FILE \
+python $FILE \
                                                 --name $EXPNAME --batch_size $VALUE --data_batch_size 1 \
                                                 --useSynData --TEXT --getPairs \
                                                 --ModelName $MODELNAME --pred_trans \
@@ -33,7 +33,7 @@ CKPT=$PROJECTPATH/results/model/$EXPNAME/version_9/checkpoints/best.ckpt
 # CKPT=$PROJECTPATH/results/model/$EXPNAME/version_8/checkpoints/best.ckpt
 
 echo $CKPT
-/home/x_cili/.conda/envs/lassie/bin/python $FILE  \
+python $FILE  \
                                                 --name $EXPNAME --batch_size $VALUE --data_batch_size 1 \
                                                 --useSynData --TEXT --getPairs \
                                                 --ModelName $MODELNAME --pred_trans \

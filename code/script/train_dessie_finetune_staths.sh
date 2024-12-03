@@ -8,7 +8,7 @@ PROJECTPATH=/home/x_cili/x_cili_lic/DESSIE
 cd $PROJECTPATH/code/src
 
 #version 2
-srun /home/x_cili/.conda/envs/lassie/bin/python train2_combine_real.py --W_shape_prior 0.01 --W_kp_img 0.001 --W_pose_img 0.01 --W_mask_img 0.0001 \
+srun python train2_combine_real.py --W_shape_prior 0.01 --W_kp_img 0.001 --W_pose_img 0.01 --W_mask_img 0.0001 \
                                                         --name TEST \
                                                         --save_dir $PROJECTPATH/results/model \
                                                         --model_dir $PROJECTPATH/code/src/SMAL/smpl_models \

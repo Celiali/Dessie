@@ -10,7 +10,7 @@ MODELNAME=DINOHMR
 EXPNAME=TOTALRANDOM
 for t in 12 ; do 
     CKPT=$PROJECTPATH/results/model/$EXPNAME/version_$t/checkpoints/best.ckpt
-    /home/x_cili/.conda/envs/lassie/bin/python $FILE  \
+    python $FILE  \
                                                     --name $EXPNAME --batch_size 32 --data_batch_size 1 \
                                                     --useSynData  --TEXT --getPairs \
                                                     --ModelName $MODELNAME --pred_trans \
@@ -22,7 +22,7 @@ MODELNAME=DESSIE
 EXPNAME=TOTALRANDOM
 for t in 9; do 
     CKPT=$PROJECTPATH/results/model/$EXPNAME/version_$t/checkpoints/best.ckpt
-    /home/x_cili/.conda/envs/lassie/bin/python $FILE  \
+    python $FILE  \
                                                     --name $EXPNAME --batch_size 32 --data_batch_size 1 \
                                                     --useSynData --TEXT \
                                                     --ModelName $MODELNAME --pred_trans \

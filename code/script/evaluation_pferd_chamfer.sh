@@ -9,7 +9,7 @@ MODELNAME=DESSIE
 EXPNAME=COMBINAREAL
 for t in 8 ; do
     CKPT=$PROJECTPATH/results/model/$EXPNAME/version_$t/checkpoints/best.ckpt
-    /home/x_cili/.conda/envs/lassie/bin/python $FILE  \
+    python $FILE  \
                                                     --name $EXPNAME --batch_size 1 --data_batch_size 1 \
                                                     --useSynData --TEXT --getPairs \
                                                     --ModelName $MODELNAME --pred_trans \
@@ -17,5 +17,5 @@ for t in 8 ; do
 done
 
 cd $PROJECTPATH/code/src
-/home/x_cili/.conda/envs/lassie/bin/python evaluate_chamfer_pferd.py --SAVE --PFERD_results $PROJECTPATH/results/PFERD \
+python evaluate_chamfer_pferd.py --SAVE --PFERD_results $PROJECTPATH/results/PFERD \
                                                                      --model_dir $PROJECTPATH/code/src/SMAL/smpl_models # --SOTA --PONY
