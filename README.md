@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ### For the hSMAL model
 The hSMAL model is available at this [link](https://sites.google.com/view/cv4horses/cv4horses).
-Download the hSMAL model and place it under `./code/src/SMAL/smpl_models` folder.
+Download the hSMAL model and the additional file through this [link](https://drive.google.com/file/d/1ZCyOqMRvjZhtDykG28NFxQBiUQ0qHn-D/view?usp=sharing), and place them under `./code/src/SMAL/smpl_models` folder.
 
 For DessiePIPE or evaluation, please follow the [data preparation](data.md) instructions to prepare the data.
 
